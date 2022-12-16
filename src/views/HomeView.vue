@@ -32,7 +32,7 @@ export default {
 </script>
 <style lang="css">
 .wrap-items {
-  padding: 30px 20px;
+  padding: 30px 19px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
