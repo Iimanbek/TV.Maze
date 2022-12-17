@@ -1,7 +1,8 @@
 <template>
   <main>
-    
+
     <router-link to="/">Home</router-link>
+    <navigation></navigation>
     <div>
       <button @click="filterP('Male')">m</button>
       <button @click="filterP('Female')">g</button>
@@ -13,7 +14,7 @@
 </template>
 <script>
 import Cards from "@/components/Cards.vue";
-// import Nav from "@/components/Nav.vue"
+import Nav from "../components/Nav.vue"
 export default {
   data() {
     return {
@@ -23,7 +24,7 @@ export default {
   },
   components: {
     cards: Cards,
-    // navv: Nav
+    navigation: Nav
   },
   methods: {
     async getData() {

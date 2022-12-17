@@ -1,6 +1,6 @@
 <template>
   <main>
-
+    <Nav></Nav>
     <router-link to="/about">About</router-link>
     <div class="wrap-items">
       <cards :data="items"></cards>
@@ -8,6 +8,7 @@
   </main>
 </template>
 <script>
+
 import Cards from "@/components/Cards.vue";
 export default {
   data() {
@@ -32,7 +33,7 @@ export default {
 </script>
 <style lang="css">
 .wrap-items {
-  padding: 30px 19px;
+  padding: 30px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

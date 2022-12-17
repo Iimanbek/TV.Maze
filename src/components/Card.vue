@@ -1,4 +1,5 @@
 <template>
+
 <div class="item">
     <div>
     <img :src="image" alt="">
