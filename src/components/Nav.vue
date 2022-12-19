@@ -36,28 +36,19 @@ export default {
     // },
     methods: {
         reloadPage() {
-        window.location.reload()
+        // window.location.reload()
         },
         search() {
             this.$router.push({
                 path:`/search`, 
                 query: { q: this.searchTerm, type: this.searchType }})
         },
-        // async getData(){
-        //     // const response = await fetch('https://api.tvmaze.com/people')
-        //     // const data = await response.json()
-        //     // this.items = await data.filter(item => item.id <= 50)
-        // },
-        // search(){
-        //     // const filteredItems = this.items.filter(item => {
-        //     // return item.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-        //     // })
-                
-        // },
-        mounted(){
-            this.getData()
-        }
-    }
+        
+    },
+    mounted(){
+
+    },
+    
 }
 </script>
 

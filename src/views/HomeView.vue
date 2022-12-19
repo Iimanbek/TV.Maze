@@ -23,7 +23,7 @@
 <script>
 
 import Cards from "@/components/Cards.vue";
-import Nav from "../components/Nav.vue"
+
 export default {
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
   },
   components: {
     cards: Cards,
-    navigation: Nav,
+
   },
   methods: {
     async getData() {

@@ -10,7 +10,7 @@ import Nav from "../components/Nav.vue"
 import Cards from "@/components/Cards.vue";
 export default{
     components: {
-        navigation: Nav,
+
         Cards
     },
     data() {
@@ -40,6 +40,15 @@ export default{
     mounted() {
         this.status = false 
         this.search()
+    },
+    watch: {
+        '$route.query.q': {
+        handler: function() {
+           this.search()
+        },
+        deep: true,
+        immediate: true
+        }
     }
 
 }

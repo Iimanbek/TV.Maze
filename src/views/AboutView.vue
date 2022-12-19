@@ -15,7 +15,6 @@
 </template>
 <script>
 import Cards from "@/components/Cards.vue";
-import Nav from "../components/Nav.vue"
 export default {
   data() {
     return {
@@ -23,8 +22,7 @@ export default {
     }
   },
   components: {
-    cards: Cards,
-    navigation: Nav
+    cards: Cards
   },
   methods: {
     async getData() {
