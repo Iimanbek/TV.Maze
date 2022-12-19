@@ -1,12 +1,13 @@
 <template>
-  <main>
-
-    <router-link to="/">Home</router-link>
+  <header>
     <navigation></navigation>
-    <div>
-      <button @click="filterP('Male')">m</button>
-      <button @click="filterP('Female')">g</button>
-    </div>
+    <div class="filt">
+      <button @click="filterP('Male')">Male</button>
+      <button @click="filterP('Female')">Female</button>
+      <button @click="filterL()">All</button>
+    </div>    
+  </header>
+  <main>
     <div class="wrap-items" v-if="items">
       <cards :data="items"></cards>
     </div>
@@ -19,7 +20,6 @@ export default {
   data() {
     return {
       items: null,
-      logon:'People'
     }
   },
   components: {
@@ -35,6 +35,10 @@ export default {
     async filterP(value) {
       await this.getData()
       this.items = await this.items.filter(item => item.gender === value)
+    },
+    async filterL() {
+      await this.getData()
+      this.items = await this.items.filter(item => item.gender)
     }
   },
   mounted() {
@@ -49,5 +53,20 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.filt{
+  display: flex;
+  justify-content: center;
+}
+.filt button{
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #008F7A;
+  background: white;
+  color: #008F7A;
+}
+.filt button:hover{
+  background: #008F7A;
+  color: white;
+}
 </style>
