@@ -42,6 +42,7 @@ export default {
             this.$router.push({
                 path:`/search`, 
                 query: { q: this.searchTerm, type: this.searchType }})
+                this.searchTerm = ''
         },
         
     },
